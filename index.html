@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+  crossorigin="anonymous"
+  />
+  <script
+  defer
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+  crossorigin="anonymous"></script>
+  <title>Document</title>
+  <!-- <style>
+    .list-group-item {
+      transition: 0.3s linear;
+    }
+    .user,
+    .comment,
+    .post {
+      width: 32%;
+    }
+    ul {
+      width: 100%;
+    }
+  </style> -->
+</head>
+
+<body>
+  <header>
+    <button id="showPostForm">Show post form</button>
+    <button id="showUserForm">Show user form</button>
+  </header>
+  <form id="userForm" class="d-none flex-column align-items-center text-light position-fixed bg-black top-0 bottom-0 w-50 p-5 end-0 z-1 align-items-center gap-2">
+    <button type="button" class="position-absolute end-0">Close user form</button>
+    <h2>Add user</h2>
+    <input type="text" name="user_name" placeholder="Enter user name...">
+    <input type="text" name="user_username" placeholder="Enter user username...">
+    <input type="text" name="user_address" placeholder="Enter user address...">
+    <button type="submit">send</button>
+  </form>
+  <form id="form" class="d-none flex-column align-items-center text-light position-fixed bg-black top-0 bottom-0 w-50 p-5 end-0 z-1 align-items-center gap-2">
+    <button type="button" class="position-absolute end-0">Close form</button>
+    <h2>ADD POST</h2>
+    <select name="user_id">
+      <option value="users" selected disabled>Users</option>
+    </select>
+    <input type="text" placeholder="title" name="post_title" class="form-control"/>
+    <input type="text" placeholder="body" name="post_body" class="form-control"/>
+    <button type="submit" class="btn btn-primary">SEARCH</button>
+  </form>
+  <div class="container box">
+    
+  </div>
+  <div class="container d-flex align-items-start my-3 gap-5">
+    <div
+    class="user d-flex flex-column align-items-center
+    justify-content-center">
+    <h2>Users</h2>
+    <ul class="list-group users"></ul>
+  </div>
+  <div
+  class="post d-flex flex-column align-items-center
+  justify-content-center">
+  <h2>Posts</h2>
+  <ul class="list-group posts"></ul>
+</div>
+<div
+class="comment d-flex flex-column align-items-center
+justify-content-center">
+<h2>Comments</h2>
+<ul class="list-group comments"></ul>
+</div>
+</div>
+<script type="module" src="./script.js"></script>
+</body>
+</html>
