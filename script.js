@@ -115,7 +115,7 @@ async function getPosts(elem, id, user) {
             itemUsers.forEach((e) => {
               e.classList.remove("active");
             });
-            li.classList.add("active");
+            // li.classList.add("active");
             let id = e.target.dataset.id;
             getPosts(posts, id, userFind?.name);
           });
@@ -153,7 +153,7 @@ async function getPosts(elem, id, user) {
           itemUsers.forEach((e) => {
             e.classList.remove("active");
           });
-          li.classList.add("active");
+          // li.classList.add("active");
           let id = e.target.dataset.id;
           getComments(comments, id);
         });
